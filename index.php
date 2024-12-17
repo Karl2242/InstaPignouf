@@ -5,10 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/output.css">
+    <link rel="icone" href="./image/logo.webp">
 </head>
-<body>
+<body class="bg-noir-bleu text-white">
     
-<h1 class="text-red-500">fdlksf</h1>
+<div class="w-full flex flex-col justify-center items-center mt-24">
+<header>
+<img class="w-52" src="./image/logo.webp" alt="">
+</header>
+<main class="flex flex-col">
 
+<h3>Connexion</h3>
+
+<form action="">
+    
+</form>
+
+</main>
+
+</div>
 </body>
 </html>

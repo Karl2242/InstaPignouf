@@ -6,7 +6,11 @@ module.exports = {
     "./front/*.php",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundColor: {
+        "noir-bleu": "#14151D",
+      },
+    },
   },
   plugins: [],
 }
