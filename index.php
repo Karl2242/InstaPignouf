@@ -18,10 +18,10 @@
 
 
 <form class="flex flex-col justify-center gap-6 w-full items-center" action="./process/process_inscription.php" method="post">
-    <input class="text-white font-extralight w-[350px] pl-4 bg-couleur-input py-3 border-white border-[1px] border-opacity-[20%] rounded-lg" type="text" placeholder="Nom d'utilisateur">
-    <input class="text-white font-extralight w-[350px] pl-4 bg-couleur-input py-3 border-white border-[1px] border-opacity-[20%] rounded-lg" type="text" placeholder="Prenom">
-    <input class="text-white font-extralight w-[350px] pl-4 bg-couleur-input py-3 border-white border-[1px] border-opacity-[20%] rounded-lg" type="text" placeholder="Nom de famille">
-    <input class="text-white font-extralight w-[350px] pl-4 bg-couleur-input py-3 border-white border-[1px] border-opacity-[20%] rounded-lg" type="text" placeholder="Mot de passe">
+    <input class="text-white font-extralight w-[350px] pl-4 bg-couleur-input py-3 border-white border-[1px] border-opacity-[20%] rounded-lg" type="text" id="username" name="username" placeholder="Nom d'utilisateur">
+    <input class="text-white font-extralight w-[350px] pl-4 bg-couleur-input py-3 border-white border-[1px] border-opacity-[20%] rounded-lg" type="text" id="prenom" name="prenom" placeholder="Prenom">
+    <input class="text-white font-extralight w-[350px] pl-4 bg-couleur-input py-3 border-white border-[1px] border-opacity-[20%] rounded-lg" type="text" id="name" name="name" placeholder="Nom de famille">
+    <input class="text-white font-extralight w-[350px] pl-4 bg-couleur-input py-3 border-white border-[1px] border-opacity-[20%] rounded-lg" type="password" id="password" name="password" placeholder="Mot de passe">
     <input class="bg-blue-500 p-2 py-3 w-[70%] mt-4 rounded-2xl shadow-xl" type="submit">
 </form>
 

@@ -1,6 +1,5 @@
 <?php 
 try {
-
     $host = "localhost";
     $dbname = "instapignouf";
     $login = "root";
