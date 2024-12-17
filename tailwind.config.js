@@ -9,6 +9,10 @@ module.exports = {
     extend: {
       backgroundColor: {
         "noir-bleu": "#14151D",
+        "couleur-input": "#202131"
+      },
+      fontFamily:{
+        jaro: ["Jaro", "serif"],
       },
     },
   },

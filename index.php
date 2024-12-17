@@ -9,21 +9,23 @@
 </head>
 <body class="bg-noir-bleu text-white">
     
-<div class="w-full flex flex-col justify-center items-center mt-24">
-<header>
+<div class="w-full flex flex-col justify-center items-center mt-24 gap-6 text-center">
+<header class="flex flex-col gap-10">
 <img class="w-52" src="./image/logo.webp" alt="">
+<h3 class="text-3xl font-jaro">Inscription</h3>
 </header>
 <main class="flex flex-col">
 
-<h3>Connexion</h3>
 
-<form class="flex flex-col gap-5" action="">
-    <input type="text" placeholder="Nom d'utilisateur">
-    <input type="text" placeholder="Prenom">
-    <input type="text" placeholder="Nom de famille">
-    <input type="text" placeholder="Mot de passe">
-    <input class="bg-blue-500 p-4" type="submit">
+<form class="flex flex-col justify-center gap-6 w-full items-center" action="./process/process_inscription.php" method="post">
+    <input class="text-white font-extralight w-[350px] pl-4 bg-couleur-input py-3 border-white border-[1px] border-opacity-[20%] rounded-lg" type="text" placeholder="Nom d'utilisateur">
+    <input class="text-white font-extralight w-[350px] pl-4 bg-couleur-input py-3 border-white border-[1px] border-opacity-[20%] rounded-lg" type="text" placeholder="Prenom">
+    <input class="text-white font-extralight w-[350px] pl-4 bg-couleur-input py-3 border-white border-[1px] border-opacity-[20%] rounded-lg" type="text" placeholder="Nom de famille">
+    <input class="text-white font-extralight w-[350px] pl-4 bg-couleur-input py-3 border-white border-[1px] border-opacity-[20%] rounded-lg" type="text" placeholder="Mot de passe">
+    <input class="bg-blue-500 p-2 py-3 w-[70%] mt-4 rounded-2xl shadow-xl" type="submit">
 </form>
+
+<p class="pt-5 font-extralight">Dejà un compte? <a class="text-blue-500" href="https://fonts.google.com/selection/embed">Connecter vous</a></p>
 
 </main>
 
