@@ -17,8 +17,12 @@
 
 <h3>Connexion</h3>
 
-<form action="">
-    
+<form class="flex flex-col gap-5" action="">
+    <input type="text" placeholder="Nom d'utilisateur">
+    <input type="text" placeholder="Prenom">
+    <input type="text" placeholder="Nom de famille">
+    <input type="text" placeholder="Mot de passe">
+    <input class="bg-blue-500 p-4" type="submit">
 </form>
 
 </main>
