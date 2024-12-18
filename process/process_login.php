@@ -61,7 +61,7 @@ header("Location: ../front/formulaire/login.php?error=1");
 
 if(password_verify($password, $mail["password"])){
 
-
+    header("Location: ../front/actu/foryou.php");
 
 }else {
 

@@ -19,14 +19,14 @@
 
 <?php if(isset($_GET['error']) && $_GET['error'] === '1'){
 ?>
-    <p>L'email ou le mot de passe est incorrect</p>
+    <p class="font-jaro pb-4 text-[#df6072]">L'email ou le mot de passe est incorrect</p>
 <?php
 }
 ?>
 
 <?php if(isset($_GET['error']) && $_GET['error'] === '2'){
 ?>
-    <p>Ce compte n'existe pas</p>
+    <p class="font-jaro pb-4">Ce compte n'existe pas</p>
 <?php
 }
 ?>

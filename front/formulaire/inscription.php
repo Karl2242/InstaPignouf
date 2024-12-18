@@ -19,14 +19,14 @@
 
 <?php if(isset($_GET['error']) && $_GET['error'] === '1'){
 ?>
-    <p>Il faut remplir tous les champs</p>
+    <p class="font-jaro pb-4">Il faut remplir tous les champs</p>
 <?php
 }
 ?>
 
 <?php if(isset($_GET['error']) && $_GET['error'] === '2'){
 ?>
-    <p>L'utilisateur existe déjà ou l'email est déjà utilisé</p>
+    <p class="font-jaro pb-4">L'utilisateur existe déjà ou l'email est déjà utilisé</p>
 <?php
 }
 ?>
