@@ -30,12 +30,30 @@ session_start();
 </div>
 
 <div class="relative w-full  mt-5"> <!-- div qui contient image et tt pelo -->
-<img class="w-[100%] h-[100%]" src="../../image/exemple insta.jpg" alt="">
+<img class="w-[100%] h-[100%]" src="../../image/vacances.jpg" alt="">
 
+<div class="flex flex-col items-end top-[73px] z-1 right-[20px] gap-8 absolute w-full">
+<img class="w-[7%]" src="../../image/heart-solid 1.png" alt="">
+<img class="w-[7%]" src="../../image/comment-solid 1.png" alt="">
+<img class="w-[7%]" src="../../image/share-from-square-solid 1.png" alt="">
+</div>
 </div>
 
+<div class="flex mt-6 gap-3 ml-3 items-center">
+<p class=" text-xl font-jaro">Karl</p>
+<p class="font-extralight text-xs">Voici le renard exemple</p>
+</div>
+<a class="mt-4 ml-5 font-extralight" href="#">Voir tous les commenaires</a>
 </article>
 
+
+<footer class="flex w-full items-center z-10 gap-9 p-4 fixed h-[9%] bottom-[31px] justify-center border-t-2 border-white border-opacity-[30%] shadow-xl">
+<a class="w-[60%]"  href="#"><img class="w-[40%]" src="../../image/home.png" alt=""></a>
+<a class="w-[60%]"  href="#"><img  class="w-[40%]" src="../../image/message.png" alt=""></a>
+<a class="w-[60%]"  href="#"><img class="w-[40%]" src="../../image/user-profil.png" alt=""></a>
+<a class="w-[60%]"  href="#"><img class="w-[40%]"  src="../../image/loop.png" alt=""></a>
+
+</footer>
 
 <?php
 require_once "../../utils/front/bas.php";
