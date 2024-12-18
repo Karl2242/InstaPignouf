@@ -95,4 +95,5 @@ try {
 
 } catch (\PDOException $error) {
     throw $error;
-}
+    
+};
