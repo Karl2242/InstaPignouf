@@ -36,10 +36,10 @@
     <input class="text-white font-extralight w-[350px] pl-4 bg-couleur-input py-3 border-white border-[1px] border-opacity-[20%] rounded-lg" type="text" id="prenom" name="prenom" placeholder="Prenom" required>
     <input class="text-white font-extralight w-[350px] pl-4 bg-couleur-input py-3 border-white border-[1px] border-opacity-[20%] rounded-lg" type="text" id="name" name="name" placeholder="Nom de famille" required>
     <input class="text-white font-extralight w-[350px] pl-4 bg-couleur-input py-3 border-white border-[1px] border-opacity-[20%] rounded-lg" type="password" id="password" name="password" placeholder="Mot de passe" required>
-    <input class="bg-blue-500 p-2 py-3 w-[70%] cursor-pointer mt-4 rounded-2xl shadow-xl" type="submit">
+    <input class="bg-[#df6072] p-2 py-3 w-[70%] cursor-pointer mt-4 rounded-2xl shadow-xl" value="S'inscrire" type="submit">
 </form>
 
-<p class="pt-5 font-extralight">Dejà un compte? <a class="text-blue-500" href="https://fonts.google.com/selection/embed">Connectez vous</a></p>
+<p class="pt-5 font-extralight">Dejà un compte? <a class="text-[#df6072]" href="./front/formulaire/login.php">Connectez vous</a></p>
 
 </main>
 

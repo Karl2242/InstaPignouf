@@ -93,6 +93,14 @@ try {
 
     // FAIRE LA REDIRECTION VERS LA PAGE D'ACCUEIL, DE PROFIL OU AUTRE ...
 
+session_start();
+
+$_SESSION["pseudo"] = $pseudo;
+$_SESSION["prenom"] = $prenom;
+
+
+
+
 } catch (\PDOException $error) {
     throw $error;
     

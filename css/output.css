@@ -629,9 +629,9 @@ video {
   --tw-border-opacity: 20%;
 }
 
-.bg-blue-500{
+.bg-\[\#df6072\]{
   --tw-bg-opacity: 1;
-  background-color: rgb(59 130 246 / var(--tw-bg-opacity, 1));
+  background-color: rgb(223 96 114 / var(--tw-bg-opacity, 1));
 }
 
 .bg-couleur-input{
@@ -642,11 +642,6 @@ video {
 .bg-noir-bleu{
   --tw-bg-opacity: 1;
   background-color: rgb(20 21 29 / var(--tw-bg-opacity, 1));
-}
-
-.bg-\[\#df6072\]{
-  --tw-bg-opacity: 1;
-  background-color: rgb(223 96 114 / var(--tw-bg-opacity, 1));
 }
 
 .p-2{
@@ -683,19 +678,14 @@ video {
   font-weight: 200;
 }
 
-.text-blue-500{
+.text-\[\#df6072\]{
   --tw-text-opacity: 1;
-  color: rgb(59 130 246 / var(--tw-text-opacity, 1));
+  color: rgb(223 96 114 / var(--tw-text-opacity, 1));
 }
 
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-}
-
-.text-\[\#df6072\]{
-  --tw-text-opacity: 1;
-  color: rgb(223 96 114 / var(--tw-text-opacity, 1));
 }
 
 .shadow-xl{
