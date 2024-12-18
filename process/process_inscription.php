@@ -5,7 +5,7 @@ require_once "../utils/connect_db.php";
 
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    header('location: ../index.php');
+    header('location: ../front/formulaire/inscription.php');
     return;
 }
 
@@ -20,7 +20,7 @@ if (
 
     )
 ) {
-    header('location: ../index.php');
+    header('location: ../front/formulaire/inscription.php');
     return;
 }
 
@@ -33,7 +33,7 @@ if (
     empty($_POST['password'])
 
 ) {
-    header('location: ../index.php?error=1');
+    header('location: ../front/formulaire/inscription.php?error=1');
     return;
 }
 
@@ -46,7 +46,7 @@ if (
     strlen($_POST['password']) > 50
 
 ) {
-    header('location: ../index.php');
+    header('location: ../front/formulaire/inscription.php');
     return;
 }
 
@@ -70,7 +70,7 @@ try {
 
     if ($users) {
 
-        header('location: ../index.php?error=2');
+        header('location: ../front/formulaire/inscription.php?error=2');
         return;
     }
 
