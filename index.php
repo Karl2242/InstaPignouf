@@ -17,12 +17,26 @@
 <main class="flex flex-col">
 
 
+<?php if(isset($_GET['error']) && $_GET['error'] === '1'){
+?>
+    <p>Il faut remplir tous les champs</p>
+<?php
+}
+?>
+
+<?php if(isset($_GET['error']) && $_GET['error'] === '2'){
+?>
+    <p>L'utilisateur existe déjà ou l'email est déjà utilisé</p>
+<?php
+}
+?>
 <form class="flex flex-col justify-center gap-6 w-full items-center" action="./process/process_inscription.php" method="post">
-    <input class="text-white font-extralight w-[350px] pl-4 bg-couleur-input py-3 border-white border-[1px] border-opacity-[20%] rounded-lg" type="text" id="username" name="username" placeholder="Nom d'utilisateur">
-    <input class="text-white font-extralight w-[350px] pl-4 bg-couleur-input py-3 border-white border-[1px] border-opacity-[20%] rounded-lg" type="text" id="prenom" name="prenom" placeholder="Prenom">
-    <input class="text-white font-extralight w-[350px] pl-4 bg-couleur-input py-3 border-white border-[1px] border-opacity-[20%] rounded-lg" type="text" id="name" name="name" placeholder="Nom de famille">
-    <input class="text-white font-extralight w-[350px] pl-4 bg-couleur-input py-3 border-white border-[1px] border-opacity-[20%] rounded-lg" type="password" id="password" name="password" placeholder="Mot de passe">
-    <input class="bg-blue-500 p-2 py-3 w-[70%] mt-4 rounded-2xl shadow-xl" type="submit">
+    <input class="text-white font-extralight w-[350px] pl-4 bg-couleur-input py-3 border-white border-[1px] border-opacity-[20%] rounded-lg" type="email" id="email" name="email" placeholder="Email" required>
+    <input class="text-white font-extralight w-[350px] pl-4 bg-couleur-input py-3 border-white border-[1px] border-opacity-[20%] rounded-lg" type="text" id="username" name="username" placeholder="Nom d'utilisateur" required>
+    <input class="text-white font-extralight w-[350px] pl-4 bg-couleur-input py-3 border-white border-[1px] border-opacity-[20%] rounded-lg" type="text" id="prenom" name="prenom" placeholder="Prenom" required>
+    <input class="text-white font-extralight w-[350px] pl-4 bg-couleur-input py-3 border-white border-[1px] border-opacity-[20%] rounded-lg" type="text" id="name" name="name" placeholder="Nom de famille" required>
+    <input class="text-white font-extralight w-[350px] pl-4 bg-couleur-input py-3 border-white border-[1px] border-opacity-[20%] rounded-lg" type="password" id="password" name="password" placeholder="Mot de passe" required>
+    <input class="bg-blue-500 p-2 py-3 w-[70%] cursor-pointer mt-4 rounded-2xl shadow-xl" type="submit">
 </form>
 
 <p class="pt-5 font-extralight">Dejà un compte? <a class="text-blue-500" href="https://fonts.google.com/selection/embed">Connecter vous</a></p>
