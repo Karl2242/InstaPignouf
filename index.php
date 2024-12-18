@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/output.css">
-    <link rel="icone" href="./image/logo.webp">
+    <link rel="icon" href="./image/logo.webp">
 </head>
 <body class="bg-noir-bleu text-white">
     
 <div class="w-full flex flex-col justify-center items-center mt-24 gap-6 text-center">
 <header class="flex flex-col gap-10">
-<img class="w-52" src="./image/logo.webp" alt="">
+<img class="w-52" src="./image/logo.webp" alt="logo">
 <h3 class="text-3xl font-jaro">Inscription</h3>
 </header>
 <main class="flex flex-col">
@@ -39,7 +39,7 @@
     <input class="bg-blue-500 p-2 py-3 w-[70%] cursor-pointer mt-4 rounded-2xl shadow-xl" type="submit">
 </form>
 
-<p class="pt-5 font-extralight">Dejà un compte? <a class="text-blue-500" href="https://fonts.google.com/selection/embed">Connecter vous</a></p>
+<p class="pt-5 font-extralight">Dejà un compte? <a class="text-blue-500" href="https://fonts.google.com/selection/embed">Connectez vous</a></p>
 
 </main>
 
