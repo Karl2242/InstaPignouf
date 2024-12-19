@@ -2,7 +2,7 @@
 
 <?php
 require_once "../../utils/front/haut.php";
-session_start();
+
 ?>
 
 <h3 class="font-jaro text-xl p-3 ml-3">Pour vous,  <span class="font-bold text-2xl text-[#df6072]"><?= $_SESSION["pseudo"] ?> </span></h3>
@@ -53,8 +53,14 @@ session_start();
 <a class="w-[60%]"  href="#"><img class="w-[40%]" src="../../image/user-profil.png" alt=""></a>
 <a class="w-[60%]"  href="#"><img class="w-[40%]"  src="../../image/loop.png" alt=""></a>
 
+
+
+   <form action="../../process/process_upload.php" method="POST" enctype="multipart/form-data">
+        <label for="file">Fichier</label>
+        <input type="file" name="photos">
+        <button type="submit">Enregistrer</button>
+    </form>
+
+
 </footer>
 
-<?php
-require_once "../../utils/front/bas.php";
-?>
