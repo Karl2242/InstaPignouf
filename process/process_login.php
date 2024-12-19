@@ -1,7 +1,7 @@
 <?php
 
 require_once "../utils/connect_db.php";
-
+session_start();
 
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
@@ -62,7 +62,7 @@ header("Location: ../front/formulaire/login.php?error=1");
 if(password_verify($password, $mail["password"])){
 
     header("Location: ../front/actu/foryou.php");
-
+    $_SESSION["id"] = $mail["id"];
 }else {
 
     header("Location: ../front/formulaire/login.php?error=1");

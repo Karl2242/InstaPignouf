@@ -5,7 +5,7 @@ require_once "../../utils/front/haut.php";
 session_start();
 ?>
 
-<h3 class="font-jaro text-xl p-3 ml-3">Pour vous,  <span class="font-bold text-2xl text-[#df6072]"><?= $_SESSION["pseudo"] ?> </span></h3>
+<h3 class="font-jaro text-xl p-3 ml-3">Pour vous,  <span class="font-bold text-2xl text-[#df6072]"><?= $_SESSION["id"] ?> </span></h3>
 
 <div class="flex w-full pt-5 ml-4"> <!-- Div qui contient les story est qui les flex -->
 
