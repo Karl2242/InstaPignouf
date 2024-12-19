@@ -70,13 +70,13 @@ session_start();
     <footer class="flex-col w-full items-center z-10 gap-11 fixed h-auto bottom-2 justify-around shadow-xl lg:hidden">
         <hr class=" text-white opacity-30 mb-4">
         <section class="flex w-full items-center gap-11 justify-around shadow-xl">
-            <a class="w-1/4 flex justify-center items-center" href="#">
+            <a class="w-1/4 flex justify-center items-center" href="./foryou.php">
                 <img class="w-1/4 lg:w-2/12 xl:1/12" src="../../image/home.png" alt="">
             </a>
             <a class="w-1/4 flex justify-center items-center" href="#">
                 <img class="w-1/4 lg:w-2/12 xl:1/12" src="../../image/message.png" alt="">
             </a>
-            <a class="w-1/4 flex justify-center items-center" href="#">
+            <a class="w-1/4 flex justify-center items-center" href="./profilpage.php">
                 <img class="w-1/4 lg:w-2/12 xl:1/12" src="../../image/user-profil.png" alt="">
             </a>
             <a class="w-1/4 flex justify-center items-center" href="#">
