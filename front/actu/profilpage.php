@@ -27,6 +27,9 @@ session_start();
                         </h2>
                         <h3>Following</h3>
                     </div>
+                    <form action="../../process/logout_user.php" method="POST">
+                    <button type="submit" class="bg-[#DF6072] hover:bg-red-700 text-white text-sm text-center  py-1 px-3 rounded-sm focus:outline-none focus:shadow-outline transition duration-300">Deconnexion</button>
+                </form>
                 </div>
             </div>
             <h2 class="text-lg px-3"><?= strtoupper($_SESSION["pseudo"]) ?> </h2>
@@ -39,9 +42,7 @@ session_start();
             <button class="w-full bg-couleur-input font-extralight text-sm text-center  border-white border-2 border-opacity-[30%] rounded-sm" type="sumbit">Suivre</button>
         </form>
 
-        <section class="flex flex-wrap justify-around">
-            <img src="../../image/cover.webp" alt="" class="w-1/3 p-0.5">
-            <img src="../../image/cover.webp" alt="" class="w-1/3 p-0.5">
+        <section class="flex flex-wrap justify-between">
             <img src="../../image/cover.webp" alt="" class="w-1/3 p-0.5">
         </section>
     </main>
@@ -49,13 +50,13 @@ session_start();
     <footer class="flex-col w-full items-center z-10 gap-11 fixed h-auto bottom-2 justify-around shadow-xl lg:hidden">
         <hr class=" text-white opacity-30 mb-4">
         <section class="flex w-full items-center gap-11 justify-around shadow-xl">
-            <a class="w-1/4 flex justify-center items-center" href="#">
+            <a class="w-1/4 flex justify-center items-center" href="./foryou.php">
                 <img class="w-1/4 lg:w-2/12 xl:1/12" src="../../image/home.png" alt="">
             </a>
             <a class="w-1/4 flex justify-center items-center" href="#">
                 <img class="w-1/4 lg:w-2/12 xl:1/12" src="../../image/message.png" alt="">
             </a>
-            <a class="w-1/4 flex justify-center items-center" href="#">
+            <a class="w-1/4 flex justify-center items-center" href="./profilpage.php">
                 <img class="w-1/4 lg:w-2/12 xl:1/12" src="../../image/user-profil.png" alt="">
             </a>
             <a class="w-1/4 flex justify-center items-center" href="#">
