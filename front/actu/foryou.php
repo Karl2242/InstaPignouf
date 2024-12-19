@@ -11,7 +11,7 @@ session_start();
             <div class="flex justify-between w-full px-5 py-3 items-center">
                 <h3 class="font-jaro text-xl  md:text-2xl lg:text-xl">Pour vous, <span class="font-bold text-2xl md:text-3xl lg:text-4xl text-[#df6072]"><?= $_SESSION["pseudo"] ?> </span></h3>
                 <form action="../../process/logout_user.php" method="POST">
-                    <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-3 rounded focus:outline-none focus:shadow-outline transition duration-300">Deconnexion</button>
+                    <button type="submit" class="bg-[#DF6072] hover:bg-red-700 text-white text-sm text-center  py-1 px-3 rounded-sm focus:outline-none focus:shadow-outline transition duration-300">Deconnexion</button>
                 </form>
             </div>
 
@@ -36,7 +36,7 @@ session_start();
 
                 <form class="w-[50%] flex justify-end " action="">
                     <input type="hidden" name="">
-                    <button class="w-[40%] bg-couleur-input font-extralight text-sm text-center  border-white border-2 border-opacity-[30%] rounded-sm" type="sumbit">Suivre</button>
+                    <button class="px-8 bg-couleur-input font-extralight text-sm text-center  border-white border-2 border-opacity-[30%] rounded-sm" type="sumbit">Suivre</button>
                 </form>
             </div>
 
