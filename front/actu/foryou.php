@@ -9,7 +9,7 @@ session_start();
         <section class="flex flex-col gap-4">
 
             <div class="flex justify-between w-full px-5 py-3 items-center">
-                <h3 class="font-jaro text-xl  md:text-2xl lg:text-xl">Pour vous, <span class="font-bold text-2xl md:text-3xl lg:text-4xl text-[#df6072]"><?= $_SESSION["pseudo"] ?> </span></h3>
+                <h3 class="font-jaro text-xl  md:text-2xl lg:text-xl">Pour vous, <span class="font-bold text-2xl md:text-3xl lg:text-4xl text-[#df6072]"><?= strtoupper($_SESSION["pseudo"]) ?> </span></h3>
                 <form action="../../process/logout_user.php" method="POST">
                     <button type="submit" class="bg-[#DF6072] hover:bg-red-700 text-white text-sm text-center  py-1 px-3 rounded-sm focus:outline-none focus:shadow-outline transition duration-300">Deconnexion</button>
                 </form>
