@@ -1,6 +1,7 @@
 <?php
 
 require_once "../utils/connect_db.php";
+session_start();
 
 
 
@@ -21,7 +22,6 @@ if (
     return;
 }
 
-
 if (
     empty($_POST['email']) ||
     empty($_POST['password'])
@@ -30,7 +30,6 @@ if (
     header('location: ../front/formulaire/login.php');
     return;
 }
-
 
 if (
     strlen($_POST['email']) > 100 ||
@@ -41,36 +40,32 @@ if (
     return;
 }
 
-
 $email = htmlspecialchars(trim($_POST['email']));
 $password = $_POST['password'];
 
 try {
-    
-$request = $pdo->prepare("SELECT * FROM users WHERE email = :email");
-$request->bindParam(":email", $email);
-$request->execute();
 
-$mail = $request->fetch(PDO::FETCH_ASSOC);
+    $request = $pdo->prepare("SELECT * FROM users WHERE email = :email");
+    $request->bindParam(":email", $email);
+    $request->execute();
 
-if(!$mail){
 
-header("Location: ../front/formulaire/login.php?error=1");
+    $userid = $request->fetch(PDO::FETCH_ASSOC);
 
-} else{
+    if (!$userid) {
 
-if(password_verify($password, $mail["password"])){
+        header("Location: ../front/formulaire/login.php?error=1");
+    } else {
 
-    header("Location: ../front/actu/foryou.php");
+        if (password_verify($password, $userid["password"])) {
+            $_SESSION['user_id'] = $userid;
+          
+            header("Location: ../front/actu/foryou.php");
+        } else {
 
-}else {
-
-    header("Location: ../front/formulaire/login.php?error=1");
-
-}
-
-}
-
+            header("Location: ../front/formulaire/login.php?error=1");
+        }
+    }
 } catch (\PDOException $error) {
     throw $error;
 }

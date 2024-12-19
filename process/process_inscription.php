@@ -98,6 +98,7 @@ session_start();
 $_SESSION["pseudo"] = $pseudo;
 $_SESSION["prenom"] = $prenom;
 
+
 header("Location: ../front/actu/foryou.php");
 
 
