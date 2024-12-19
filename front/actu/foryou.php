@@ -36,7 +36,7 @@ session_start();
 
                 <form class="w-[50%] flex justify-end " action="">
                     <input type="hidden" name="">
-                    <input class="w-[40%] bg-couleur-input font-extralight text-sm text-center  border-white border-2 border-opacity-[30%] rounded-sm" value="Suivre" type="sumbit">
+                    <button class="w-[40%] bg-couleur-input font-extralight text-sm text-center  border-white border-2 border-opacity-[30%] rounded-sm" type="sumbit">Suivre</button>
                 </form>
             </div>
 
