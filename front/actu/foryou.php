@@ -1,7 +1,30 @@
 <?php
 include_once "../../utils/check-if-not-connected.php";
-
+require_once "../../utils/connect_db.php";
 require_once "../../utils/front/haut.php";
+
+$sql ="SELECT * FROM photos";
+
+
+try {
+
+    $request = $pdo->prepare($sql);
+    $request->execute();
+
+    $photos = $request->fetchAll(PDO::FETCH_ASSOC);
+
+}
+catch (\PDOException $error) {
+    throw $error;
+}
+
+
+
+
+
+
+
+
 ?>
 
 <body>
@@ -41,9 +64,9 @@ require_once "../../utils/front/haut.php";
                 </form>
             </div>
 
-            <div class="relative w-full "> <!-- div qui contient image et tt pelo -->
+            <div class="relative w-full flex flex-col gap-4"> <!-- div qui contient image et tt pelo -->
                 <img class="w-[100%] h-[100%]" src="../../image/vacances.jpg" alt="">
-
+                <img class="w-[100%] h-[100%]" src="../../uploads/<?=$photos[1]["image_url"]?>" alt="">
                 <div class="flex flex-col items-end top-1/3 z-1 right-[2%] gap-8 absolute w-full">
                     <i class="fas fa-heart text-2xl text-black" src="../../image/heart-solid 1.png" alt="like"> </i>
                     <i class="fas fa-comment text-2xl text-black" src="../../image/heart-solid 1.png" alt="comment"> </i>
@@ -59,6 +82,14 @@ require_once "../../utils/front/haut.php";
                 <a class="font-extralight" href="#">Voir tous les commenaires</a>
             </div>
 
+            <div>
+            <form class = "flex gap-6 justify-center"action="../../process/process_commentaire.php" method="post">
+            <input class="bg-[#df6072] p-3 w-[70%] cursor-pointer mt-4 rounded-2xl shadow-xl placeholder:italic placeholder:text-white placeholder:text-center" type="text" placeholder="votre commentaire" name="commentaire" id="commentaire">
+            <input class="pt-3" type="submit">
+            </form>
+
+
+            </div>
         </section>
 
 

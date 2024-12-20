@@ -53,20 +53,22 @@ try {
 
     $user = $request->fetch(PDO::FETCH_ASSOC);
 
-    if (!$user) {
 
-        header("Location: ../front/formulaire/login.php?error=1");
-    } else {
-
-        if (password_verify($password, $user["password"])) {
-
-            header("Location: ../front/actu/foryou.php");
-            $_SESSION["user"] = $user;
-        } else {
-
-            header("Location: ../front/formulaire/login.php?error=1");
-        }
-    }
 } catch (\PDOException $error) {
     throw $error;
+}
+
+if (!$user) {
+
+    header("Location: ../front/formulaire/login.php?error=1");
+} else {
+
+    if (password_verify($password, $user["password"])) {
+
+        header("Location: ../front/actu/foryou.php");
+        $_SESSION["user"] = $user;
+    } else {
+
+        header("Location: ../front/formulaire/login.php?error=1");
+    }
 }
