@@ -45,7 +45,7 @@ require_once "../../utils/front/haut.php";
             <button class="w-full bg-couleur-input font-extralight text-sm text-center  border-white border-2 border-opacity-[30%] rounded-sm" type="sumbit">Suivre</button>
         </form>
 
-        <section class="flex flex-wrap justify-between">
+        <section class="flex flex-wrap justify-start">
             <?php
 
             $sql = "SELECT * FROM photos INNER JOIN users ON photos.user_id = users.id";
@@ -54,19 +54,17 @@ require_once "../../utils/front/haut.php";
                 $stmt = $pdo->prepare($sql);
                 $stmt->execute();
                 $photos = $stmt->fetchAll(PDO::FETCH_ASSOC);
-              
-              
-              
-              } catch (PDOException $error) {
+            } catch (PDOException $error) {
                 echo "Erreur lors de la requete : " . $error->getMessage();
-              }
-  
-              foreach ($photos as $photo) { ?>
-               
-               <img class="w-1/3" src="../../uploads/<?= $photo['image_url'];?>" alt="">
-               
-              <?php }
+            }
 
+            foreach ($photos as $photo) {
+            ?>
+
+                <img class="w-1/3" src="../../uploads/<?= $photo['image_url']; ?>" alt="">
+
+            <?php
+            }
             ?>
         </section>
     </main>
