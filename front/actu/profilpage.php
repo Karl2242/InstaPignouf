@@ -51,22 +51,21 @@ require_once "../../utils/front/haut.php";
 
             if (isset($_SESSION["user"]["id"])) {
                 $userId = $_SESSION["user"]["id"];
-                var_dump($userId);
             } else {
                 die('ID manquant');
             }
 
 
-            $sql = "SELECT photos.image_url FROM photos INNER JOIN users ON photos.user_id = users.:id";
+            $sql = "SELECT photos.image_url FROM photos INNER JOIN users ON photos.user_id = :userId";
 
             try {
                 $stmt = $pdo->prepare($sql);
                 $stmt->execute(
-                    [":id" => $userId,]
+                    [":userId" => $userId,]
                 );
                 $photos = $stmt->fetchAll(PDO::FETCH_ASSOC);
-var_dump($photos);
-die();
+// var_dump($photos);
+// die();
 
 
             } catch (PDOException $error) {
