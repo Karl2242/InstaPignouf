@@ -1,3 +1,8 @@
+<?php
+include_once './utils/check-if-connected.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

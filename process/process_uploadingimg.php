@@ -50,7 +50,7 @@ $sql = "INSERT INTO photos (user_id, image_url, date) VALUES (:user_id, :imageNa
 try {
     $stmt = $pdo->prepare($sql);
     $stmt->execute([
-        ':user_id' => $_SESSION["id"],
+        ':user_id' => $_SESSION["user"]["id"],
         ':imageName' => $new_image_name
     ]);
 } catch (\PDOException $error) {

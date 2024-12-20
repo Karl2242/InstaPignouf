@@ -46,31 +46,27 @@ $email = htmlspecialchars(trim($_POST['email']));
 $password = $_POST['password'];
 
 try {
-    
-$request = $pdo->prepare("SELECT * FROM users WHERE email = :email");
-$request->bindParam(":email", $email);
-$request->execute();
 
-$mail = $request->fetch(PDO::FETCH_ASSOC);
+    $request = $pdo->prepare("SELECT * FROM users WHERE email = :email");
+    $request->bindParam(":email", $email);
+    $request->execute();
 
-if(!$mail){
+    $user = $request->fetch(PDO::FETCH_ASSOC);
 
-header("Location: ../front/formulaire/login.php?error=1");
+    if (!$user) {
 
-} else{
+        header("Location: ../front/formulaire/login.php?error=1");
+    } else {
 
-if(password_verify($password, $mail["password"])){
+        if (password_verify($password, $user["password"])) {
 
-    header("Location: ../front/actu/foryou.php");
-    $_SESSION["id"] = $mail["id"];
-}else {
+            header("Location: ../front/actu/foryou.php");
+            $_SESSION["user"] = $user;
+        } else {
 
-    header("Location: ../front/formulaire/login.php?error=1");
-
-}
-
-}
-
+            header("Location: ../front/formulaire/login.php?error=1");
+        }
+    }
 } catch (\PDOException $error) {
     throw $error;
 }

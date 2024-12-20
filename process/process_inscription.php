@@ -73,7 +73,6 @@ try {
         header('location: ../front/formulaire/inscription.php?error=2');
         return;
     }
-
 } catch (\PDOException $error) {
     throw $error;
 }
@@ -93,15 +92,30 @@ try {
 
     // FAIRE LA REDIRECTION VERS LA PAGE D'ACCUEIL, DE PROFIL OU AUTRE ...
 
-session_start();
-
-$_SESSION["pseudo"] = $pseudo;
-$_SESSION["prenom"] = $prenom;
-
-header("Location: ../front/actu/foryou.php");
 
 
+    try {
+
+        $request = $pdo->prepare("SELECT * FROM users WHERE email = :email");
+        $request->bindParam(":email", $email);
+        $request->execute();
+
+        $user = $request->fetch(PDO::FETCH_ASSOC);
+
+        if (!$user) {
+
+            header("Location: ../front/formulaire/login.php?error=1");
+        } else {
+            session_start();
+
+            $_SESSION["user"] = $user;
+        }
+    } catch (\PDOException $error) {
+        throw $error;
+    }
+
+
+    header("Location: ../front/actu/foryou.php");
 } catch (\PDOException $error) {
     throw $error;
-    
 };

@@ -1,6 +1,9 @@
 <?php
+include_once "../../utils/check-if-not-connected.php";
+
+
 require_once "../../utils/front/haut.php";
-session_start();
+
 ?>
 
 <body>
@@ -32,7 +35,7 @@ session_start();
                 </form>
                 </div>
             </div>
-            <h2 class="text-lg px-3"><?= strtoupper($_SESSION["prenom"]) ?> </h2>
+            <h2 class="text-lg px-3"><?= strtoupper($_SESSION["user"]["prenom"]) ?> </h2>
             <p class="text-sm opacity-60 px-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt magnam quidem, reprehenderit ipsam perspiciatis modi.</p>
 
         </section>
