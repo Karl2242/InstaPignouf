@@ -1,9 +1,9 @@
 <?php
 include_once "../../utils/check-if-not-connected.php";
 
+require_once "../../utils/connect_db.php";
 
 require_once "../../utils/front/haut.php";
-
 ?>
 
 <body>
@@ -30,9 +30,9 @@ require_once "../../utils/front/haut.php";
                         </h2>
                         <h3>Following</h3>
                     </div>
-                   
+
                     <a href="../formulaire/formimg.php" class="bg-[#999999] hover:bg-[#5c5c5c] text-white text-sm text-center  py-1 px-3 rounded-sm focus:outline-none focus:shadow-outline transition duration-300"><i class="fas fa-plus white"></i></a>
- 
+
                 </div>
             </div>
             <h2 class="text-lg px-3"><?= strtoupper($_SESSION["user"]["prenom"]) ?> </h2>
@@ -46,7 +46,28 @@ require_once "../../utils/front/haut.php";
         </form>
 
         <section class="flex flex-wrap justify-between">
-            <img src="../../image/cover.webp" alt="" class="w-1/3 p-0.5">
+            <?php
+
+            $sql = "SELECT * FROM photos INNER JOIN users ON photos.user_id = users.id";
+
+            try {
+                $stmt = $pdo->prepare($sql);
+                $stmt->execute();
+                $photos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+              
+              
+              
+              } catch (PDOException $error) {
+                echo "Erreur lors de la requete : " . $error->getMessage();
+              }
+  
+              foreach ($photos as $photo) { ?>
+               
+               <img class="w-1/3" src="../../uploads/<?= $photo['image_url'];?>" alt="">
+               
+              <?php }
+
+            ?>
         </section>
     </main>
 

@@ -65,4 +65,4 @@ try {
     throw $error;
 }
 
-
+header('location: ../front/actu/profilpage.php');
