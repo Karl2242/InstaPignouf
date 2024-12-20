@@ -1,7 +1,21 @@
 <?php
 include_once "../../utils/check-if-not-connected.php";
-
+require_once "../../utils/connect_db.php";
 require_once "../../utils/front/haut.php";
+
+$sql = "SELECT * FROM photos";
+
+
+try {
+
+    $request = $pdo->prepare($sql);
+    $request->execute();
+
+    $photos = $request->fetchAll(PDO::FETCH_ASSOC);
+} catch (\PDOException $error) {
+    throw $error;
+}
+
 ?>
 
 <body>
@@ -41,8 +55,9 @@ require_once "../../utils/front/haut.php";
                 </form>
             </div>
 
-            <div class="relative w-full "> <!-- div qui contient image et tt pelo -->
+            <div class="relative w-full flex flex-col gap-4 "> <!-- div qui contient image et tt pelo -->
                 <img class="w-[100%] h-[100%]" src="../../image/vacances.jpg" alt="">
+                <img class="w-[100%] h-[100%]" src="../../uploads/<?=$photos[1]["image_url"]?>" alt="">
 
                 <div class="flex flex-col items-end top-1/3 z-1 right-[2%] gap-8 absolute w-full">
                     <i class="fas fa-heart text-2xl text-black" src="../../image/heart-solid 1.png" alt="like"> </i>
