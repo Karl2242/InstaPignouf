@@ -7,7 +7,7 @@ if(
     
 ) {
     // Chemin relatif vers le fichier profilpage.php à partir du répertoire "InstaPignouf"
-    $relativePath = '/front/actu/profilpage.php';
+    $relativePath = '/front/actu/foryou.php';
 
     // Obtenir le chemin absolu du fichier à rediriger
     $filePath = realpath(dirname(__FILE__) . "/../" . $relativePath);

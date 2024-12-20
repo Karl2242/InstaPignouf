@@ -12,7 +12,7 @@ require_once "../../utils/front/haut.php";
             <div class="flex justify-between w-full px-5 py-3 items-center">
                 <h3 class="font-jaro text-xl  md:text-2xl lg:text-xl">Pour vous, <span class="font-bold text-2xl md:text-3xl lg:text-4xl text-[#df6072]"><?= strtoupper($_SESSION["user"]["prenom"]) ?> </span></h3>
                 <form action="../../process/logout_user.php" method="POST">
-                    <button type="submit" class="bg-[#DF6072] hover:bg-red-700 text-white text-sm text-center  py-1 px-3 rounded-sm focus:outline-none focus:shadow-outline transition duration-300">Deconnexion</button>
+                    <button type="submit" class="bg-[#DF6072] hover:bg-red-700 text-white text-sm text-center  py-1 px-3 rounded-sm focus:outline-none focus:shadow-outline transition duration-300"><i class="fas fa-power-off white"></i></button>
                 </form>
             </div>
 
@@ -68,7 +68,7 @@ require_once "../../utils/front/haut.php";
 
 
 
-    <footer class="flex-col w-full items-center z-10 gap-11 fixed h-auto bottom-2 justify-around shadow-xl lg:hidden">
+    <footer class="flex-col w-full items-center z-10 gap-11 fixed h-auto bottom-2 justify-around shadow-xl">
         <hr class=" text-white opacity-30 mb-4">
         <section class="flex w-full items-center gap-11 justify-around shadow-xl">
             <a class="w-1/4 flex justify-center items-center" href="./foryou.php">

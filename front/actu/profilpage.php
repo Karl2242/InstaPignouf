@@ -30,9 +30,9 @@ require_once "../../utils/front/haut.php";
                         </h2>
                         <h3>Following</h3>
                     </div>
-                    <form action="../../process/logout_user.php" method="POST">
-                    <button type="submit" class="bg-[#DF6072] hover:bg-red-700 text-white text-sm text-center  py-1 px-3 rounded-sm focus:outline-none focus:shadow-outline transition duration-300">Deconnexion</button>
-                </form>
+                   
+                    <a href="../formulaire/formimg.php" class="bg-[#999999] hover:bg-[#5c5c5c] text-white text-sm text-center  py-1 px-3 rounded-sm focus:outline-none focus:shadow-outline transition duration-300"><i class="fas fa-plus white"></i></a>
+ 
                 </div>
             </div>
             <h2 class="text-lg px-3"><?= strtoupper($_SESSION["user"]["prenom"]) ?> </h2>
