@@ -4,6 +4,7 @@ include_once "../../utils/check-if-not-connected.php";
 require_once "../../utils/connect_db.php";
 
 require_once "../../utils/front/haut.php";
+
 ?>
 
 <body>
@@ -48,12 +49,26 @@ require_once "../../utils/front/haut.php";
         <section class="flex flex-wrap justify-start">
             <?php
 
-            $sql = "SELECT * FROM photos INNER JOIN users ON photos.user_id = users.id";
+            if (isset($_SESSION["user"]["id"])) {
+                $userId = $_SESSION["user"]["id"];
+                var_dump($userId);
+            } else {
+                die('ID manquant');
+            }
+
+
+            $sql = "SELECT photos.image_url FROM photos INNER JOIN users ON photos.user_id = users.:id";
 
             try {
                 $stmt = $pdo->prepare($sql);
-                $stmt->execute();
+                $stmt->execute(
+                    [":id" => $userId,]
+                );
                 $photos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+var_dump($photos);
+die();
+
+
             } catch (PDOException $error) {
                 echo "Erreur lors de la requete : " . $error->getMessage();
             }
